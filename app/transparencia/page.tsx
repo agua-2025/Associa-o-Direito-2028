@@ -3,152 +3,165 @@ import { Header } from "@/components/Header";
 import { PageHero } from "@/components/PageHero";
 import { StatusBanner } from "@/components/StatusBanner";
 
+const principios = [
+  {
+    titulo: "Organização",
+    texto: "A Associação manterá registros administrativos, financeiros e documentais relacionados às suas atividades, campanhas, eventos e deliberações.",
+  },
+  {
+    titulo: "Controle interno",
+    texto: "A movimentação financeira deverá observar o Estatuto Social, as deliberações da Assembleia Geral e os procedimentos definidos pela Diretoria.",
+  },
+  {
+    titulo: "Prestação aos associados",
+    texto: "As prestações de contas serão realizadas perante os associados, em assembleia, reunião própria ou outro meio interno definido pela Associação.",
+  },
+  {
+    titulo: "Proteção de dados",
+    texto: "Informações pessoais, documentos financeiros detalhados e dados sensíveis não serão disponibilizados publicamente neste portal.",
+  },
+];
+
+const procedimentos = [
+  "Utilização de conta bancária própria vinculada ao CNPJ da Associação.",
+  "Preferência por movimentações eletrônicas, com registro e rastreabilidade.",
+  "Guarda de comprovantes, documentos administrativos e registros financeiros.",
+  "Análise das prestações de contas pela Comissão Fiscal, quando aplicável.",
+  "Apresentação das informações financeiras aos associados, conforme previsto no Estatuto Social.",
+];
+
 export default function TransparenciaPage() {
   return (
     <main className="min-h-screen bg-[#f7f8fa] text-[#1b2230]">
       <Header />
 
       <PageHero
-        eyebrow="Transparência"
-        title="Controle, prestação de contas e confiança."
-        description="Área destinada à divulgação organizada de receitas, despesas, relatórios, documentos financeiros e informações relacionadas à gestão dos recursos da Associação Direito 2028."
+        eyebrow="Governança"
+        title="Transparência com responsabilidade."
+        description="A AAD Direito 2028 adota práticas de organização, controle e prestação de contas aos associados, preservando a segurança das informações, a proteção de dados pessoais e a finalidade institucional da Associação."
       />
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              Receitas
+        <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
+              Como funciona
             </p>
 
-            <p className="font-display mt-4 text-5xl font-semibold text-[#13233a]">
-              R$ 0,00
-            </p>
+            <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
+              Prestação de contas aos associados, não exposição pública.
+            </h2>
 
-            <p className="mt-4 leading-7 text-[#667085]">
-              Total de valores arrecadados em campanhas, contribuições, eventos
-              e demais ações oficiais.
+            <p className="mt-6 text-lg leading-8 text-[#596579]">
+              A transparência da Associação será exercida de forma responsável,
+              com informações prestadas aos associados nos termos do Estatuto
+              Social, sem divulgação pública de saldos, extratos, dados pessoais,
+              comprovantes individuais ou detalhes financeiros sensíveis.
             </p>
           </div>
 
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              Despesas
+          <div className="rounded-[2rem] border border-[#e5dacb] bg-white p-8 shadow-sm md:p-10">
+            <p className="font-display text-4xl font-semibold text-[#13233a]">
+              Compromisso institucional
             </p>
 
-            <p className="font-display mt-4 text-5xl font-semibold text-[#13233a]">
-              R$ 0,00
-            </p>
+            <div className="mt-6 space-y-5 text-lg leading-8 text-[#596579]">
+              <p>
+                A Associação manterá controle das receitas, despesas,
+                obrigações, campanhas, eventos e demais atos relacionados à
+                organização da formatura.
+              </p>
 
-            <p className="mt-4 leading-7 text-[#667085]">
-              Total de pagamentos, custos operacionais, despesas de campanhas e
-              gastos vinculados aos objetivos da Associação.
-            </p>
-          </div>
+              <p>
+                As informações financeiras detalhadas serão tratadas em ambiente
+                interno, perante os associados, a Diretoria, a Comissão Fiscal e
+                a Assembleia Geral, conforme as regras estatutárias.
+              </p>
 
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              Saldo
-            </p>
-
-            <p className="font-display mt-4 text-5xl font-semibold text-[#13233a]">
-              R$ 0,00
-            </p>
-
-            <p className="mt-4 leading-7 text-[#667085]">
-              Saldo disponível após a apuração das receitas e despesas
-              registradas oficialmente.
-            </p>
+              <p>
+                Por segurança, documentos financeiros detalhados não serão
+                publicados de forma aberta neste portal.
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="bg-[#edf0f5] py-20">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 rounded-[2.2rem] border border-white/70 bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[0.85fr_1.15fr]">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
-                Prestação de contas
-              </p>
+          <div className="mb-12 max-w-3xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
+              Diretrizes
+            </p>
 
-              <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
-                Uma gestão acompanhada pelos associados.
-              </h2>
-            </div>
+            <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
+              Controle, segurança e responsabilidade.
+            </h2>
 
-            <div className="space-y-6 text-lg leading-8 text-[#596579]">
-              <p>
-                A transparência será um dos pilares da Associação. As receitas,
-                despesas e movimentações financeiras deverão ser registradas,
-                comprovadas e organizadas para acompanhamento dos associados.
-              </p>
+            <p className="mt-5 text-lg leading-8 text-[#596579]">
+              A página de transparência apresenta os princípios de governança da
+              Associação, sem substituir os canais internos de prestação de
+              contas aos associados.
+            </p>
+          </div>
 
-              <p>
-                A movimentação financeira deverá ocorrer, preferencialmente, por
-                meio eletrônico, em conta bancária própria vinculada ao CNPJ da
-                Associação, permitindo rastreabilidade e controle.
-              </p>
+          <div className="grid gap-6 md:grid-cols-2">
+            {principios.map((item) => (
+              <div
+                key={item.titulo}
+                className="rounded-[1.8rem] border border-white/70 bg-white p-8 shadow-sm"
+              >
+                <p className="font-display text-4xl font-semibold text-[#13233a]">
+                  {item.titulo}
+                </p>
 
-              <p>
-                Relatórios, comprovantes, atas de aprovação e documentos
-                financeiros poderão ser disponibilizados nesta área conforme a
-                formalização da Associação e a realização das campanhas.
-              </p>
-            </div>
+                <p className="mt-4 leading-7 text-[#596579]">{item.texto}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="mb-12 max-w-3xl">
-          <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
-            Indicadores
-          </p>
+        <div className="grid gap-10 rounded-[2.2rem] border border-[#e5dacb] bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[0.9fr_1.1fr]">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
+              Procedimentos
+            </p>
 
-          <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
-            O que poderá ser acompanhado.
-          </h2>
+            <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
+              Como a Associação pretende manter o controle.
+            </h2>
 
-          <p className="mt-5 text-lg leading-8 text-[#596579]">
-            Esta área poderá evoluir para apresentar informações detalhadas
-            sobre campanhas, contribuições, eventos e despesas.
-          </p>
-        </div>
+            <p className="mt-6 text-lg leading-8 text-[#596579]">
+              As práticas de controle serão aplicadas conforme o Estatuto Social
+              e as deliberações da Assembleia Geral.
+            </p>
+          </div>
 
-        <div className="grid gap-6 md:grid-cols-4">
-          {[
-            "Receitas arrecadadas",
-            "Despesas realizadas",
-            "Saldo disponível",
-            "Relatórios mensais",
-            "Campanhas ativas",
-            "Eventos realizados",
-            "Documentos financeiros",
-            "Prestação final",
-          ].map((item) => (
-            <div
-              key={item}
-              className="rounded-[1.6rem] border border-[#e5dacb] bg-white p-7 shadow-sm"
-            >
-              <p className="font-display text-3xl font-semibold text-[#13233a]">
-                {item}
-              </p>
+          <div className="space-y-4">
+            {procedimentos.map((item, index) => (
+              <div
+                key={item}
+                className="flex gap-4 rounded-[1.4rem] border border-[#e5dacb] bg-[#f7f8fa] p-5"
+              >
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#13233a] text-sm font-semibold text-white">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
 
-              <p className="mt-4 leading-7 text-[#667085]">
-                Informação destinada ao acompanhamento organizado da gestão da
-                Associação.
-              </p>
-            </div>
-          ))}
+                <p className="leading-7 text-[#596579]">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
       <StatusBanner
-        eyebrow="Em implantação"
-        title="Os dados reais serão inseridos após o início das movimentações."
-        description="Enquanto a Associação estiver em fase de constituição, os dados financeiros aparecerão zerados ou em implantação. Após a abertura da conta e início das campanhas, esta área poderá ser atualizada periodicamente."
-        statusLabel="Status da transparência"
-        status="Em implantação"
+        eyebrow="Acesso interno"
+        title="Prestação de contas será tratada com os associados."
+        description="Relatórios, comprovantes, saldos, despesas e demais informações financeiras detalhadas serão apresentados por meio interno adequado, respeitando o Estatuto Social, a proteção de dados pessoais e a segurança da Associação."
+        statusLabel="Página pública"
+        status="Governança"
         buttonLabel="Ver documentos"
         buttonHref="/documentos"
       />
