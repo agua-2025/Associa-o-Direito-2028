@@ -8,6 +8,7 @@ const menuItems = [
   { label: "Início", href: "/" },
   { label: "Quem somos", href: "/associacao" },
   { label: "Campanhas", href: "/campanhas" },
+  { label: "Documentos", href: "/documentos" },
   { label: "Governança", href: "/transparencia" },
   { label: "Contato", href: "/contato" },
 ];

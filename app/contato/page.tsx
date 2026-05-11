@@ -1,195 +1,103 @@
+import Link from "next/link";
+
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { PageHero } from "@/components/PageHero";
-import { StatusBanner } from "@/components/StatusBanner";
 
 export default function ContatoPage() {
   return (
     <main className="min-h-screen bg-[#f7f8fa] text-[#1b2230]">
       <Header />
 
-      <PageHero
-        eyebrow="Contato"
-        title="Canais oficiais da Associação."
-        description="Espaço destinado à comunicação oficial com associados, apoiadores, parceiros, acadêmicos e demais interessados nas ações da Associação Direito 2028."
-      />
+      <section className="relative overflow-hidden bg-[#13233a]">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(199,165,107,0.34),transparent_30%),radial-gradient(circle_at_84%_10%,rgba(255,255,255,0.14),transparent_28%)]" />
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-6 md:grid-cols-3">
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              WhatsApp
+        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+          <div className="max-w-4xl">
+            <p className="text-xs font-semibold uppercase tracking-[0.42em] text-[#e6c98d]">
+              Contato
             </p>
 
-            <h2 className="font-display mt-4 text-4xl font-semibold text-[#13233a]">
-              Em implantação
-            </h2>
+            <h1 className="font-display mt-6 text-6xl font-semibold leading-[0.98] tracking-[-0.04em] text-white md:text-8xl">
+              Fale com a AAD Direito 2028.
+            </h1>
 
-            <p className="mt-4 leading-7 text-[#667085]">
-              Canal que poderá ser utilizado para informações rápidas,
-              campanhas, eventos e comunicação com interessados.
-            </p>
-          </div>
-
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              E-mail
-            </p>
-
-            <h2 className="font-display mt-4 text-4xl font-semibold text-[#13233a]">
-              Em implantação
-            </h2>
-
-            <p className="mt-4 leading-7 text-[#667085]">
-              Endereço eletrônico institucional para comunicações formais,
-              documentos, parcerias e solicitações.
-            </p>
-          </div>
-
-          <div className="rounded-[1.8rem] border border-[#e5dacb] bg-white p-8 shadow-sm">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#a7834d]">
-              Instagram
-            </p>
-
-            <h2 className="font-display mt-4 text-4xl font-semibold text-[#13233a]">
-              Em implantação
-            </h2>
-
-            <p className="mt-4 leading-7 text-[#667085]">
-              Perfil que poderá divulgar campanhas, fotos, eventos, avisos e
-              registros da turma.
+            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/75">
+              Canal institucional da Associação dos Acadêmicos do Curso de
+              Direito, Turma de Formatura 2028.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#edf0f5] py-20">
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 rounded-[2.2rem] border border-white/70 bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[0.85fr_1.15fr]">
+      <section className="relative z-10 mx-auto -mt-14 max-w-5xl px-6">
+        <div className="rounded-[2rem] border border-white/60 bg-white/95 p-6 shadow-2xl shadow-slate-900/15 backdrop-blur-xl md:p-10">
+          <div className="grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
-                Atendimento
+                Comunicação
               </p>
 
-              <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
-                Comunicação clara e organizada.
+              <h2 className="font-display mt-4 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+                Os canais oficiais serão divulgados em breve.
+              </h2>
+
+              <p className="mt-6 text-lg leading-8 text-[#596579]">
+                A Associação definirá seus meios oficiais de contato para
+                comunicação com associados, apoiadores e parceiros.
+              </p>
+            </div>
+
+            <div className="rounded-[1.7rem] bg-[#f7f8fa] p-7">
+              <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#a7834d]">
+                Status
+              </p>
+
+              <p className="font-display mt-3 text-4xl font-semibold text-[#13233a]">
+                Em organização
+              </p>
+
+              <p className="mt-4 leading-7 text-[#667085]">
+                Contato oficial, e-mail, WhatsApp ou redes sociais serão
+                informados após definição pela Associação.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="relative overflow-hidden rounded-[2.4rem] bg-[#c7a56b] p-8 shadow-2xl shadow-slate-900/10 md:p-12">
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(255,255,255,0.34),transparent_28%),radial-gradient(circle_at_15%_80%,rgba(19,35,58,0.20),transparent_30%)]" />
+
+          <div className="relative grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-center">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#13233a]/70">
+                AAD Direito 2028
+              </p>
+
+              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+                Organização, união e memória rumo à formatura.
               </h2>
             </div>
 
-            <div className="space-y-6 text-lg leading-8 text-[#596579]">
-              <p>
-                Os canais oficiais da Associação serão definidos após a sua
-                formalização, permitindo comunicação adequada com associados,
-                apoiadores, parceiros e demais interessados.
-              </p>
+            <div className="flex flex-col gap-4">
+              <Link
+                href="/campanhas"
+                className="rounded-full bg-[#13233a] px-8 py-4 text-center text-sm font-semibold text-white transition hover:-translate-y-1 hover:bg-[#0c1728]"
+              >
+                Ver campanhas
+              </Link>
 
-              <p>
-                A ideia é evitar informações dispersas e concentrar a
-                comunicação em meios oficiais, facilitando o acompanhamento das
-                campanhas, eventos, documentos e decisões.
-              </p>
-
-              <p>
-                Enquanto os canais definitivos estiverem em implantação, as
-                informações poderão ser divulgadas pelos meios internos da
-                turma.
-              </p>
+              <Link
+                href="/associacao"
+                className="rounded-full border border-[#13233a]/25 bg-white/55 px-8 py-4 text-center text-sm font-semibold text-[#13233a] backdrop-blur transition hover:-translate-y-1 hover:bg-white"
+              >
+                Conhecer a Associação
+              </Link>
             </div>
           </div>
         </div>
       </section>
-
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-10 rounded-[2.2rem] border border-[#e5dacb] bg-white p-8 shadow-sm md:p-12 lg:grid-cols-[0.9fr_1.1fr]">
-          <div>
-            <p className="text-xs font-semibold uppercase tracking-[0.35em] text-[#a7834d]">
-              Formulário
-            </p>
-
-            <h2 className="font-display mt-4 text-5xl font-semibold leading-tight text-[#13233a] md:text-6xl">
-              Espaço para futuras mensagens.
-            </h2>
-
-            <p className="mt-6 text-lg leading-8 text-[#596579]">
-              Futuramente, esta área poderá receber um formulário para envio de
-              mensagens, sugestões, solicitações e propostas de apoio.
-            </p>
-          </div>
-
-          <div className="rounded-[1.7rem] bg-[#f7f8fa] p-8">
-            <form className="grid gap-5">
-              <div>
-                <label
-                  htmlFor="nome"
-                  className="text-sm font-semibold text-[#13233a]"
-                >
-                  Nome
-                </label>
-
-                <input
-                  id="nome"
-                  type="text"
-                  placeholder="Seu nome"
-                  disabled
-                  className="mt-2 w-full rounded-2xl border border-[#e5dacb] bg-white px-5 py-4 text-sm text-[#667085] outline-none"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="email"
-                  className="text-sm font-semibold text-[#13233a]"
-                >
-                  E-mail
-                </label>
-
-                <input
-                  id="email"
-                  type="email"
-                  placeholder="seuemail@exemplo.com"
-                  disabled
-                  className="mt-2 w-full rounded-2xl border border-[#e5dacb] bg-white px-5 py-4 text-sm text-[#667085] outline-none"
-                />
-              </div>
-
-              <div>
-                <label
-                  htmlFor="mensagem"
-                  className="text-sm font-semibold text-[#13233a]"
-                >
-                  Mensagem
-                </label>
-
-                <textarea
-                  id="mensagem"
-                  placeholder="Digite sua mensagem"
-                  disabled
-                  rows={5}
-                  className="mt-2 w-full resize-none rounded-2xl border border-[#e5dacb] bg-white px-5 py-4 text-sm text-[#667085] outline-none"
-                />
-              </div>
-
-              <button
-                type="button"
-                disabled
-                className="rounded-full bg-[#13233a] px-7 py-4 text-sm font-semibold text-white opacity-70"
-              >
-                Formulário em implantação
-              </button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <StatusBanner
-        eyebrow="Canais definitivos"
-        title="Os contatos oficiais serão divulgados após a formalização."
-        description="Após a constituição da Associação, esta página poderá apresentar telefone, WhatsApp, e-mail institucional, redes sociais e demais informações oficiais de contato."
-        statusLabel="Status do contato"
-        status="Em implantação"
-        buttonLabel="Voltar ao início"
-        buttonHref="/"
-      />
 
       <Footer />
     </main>
