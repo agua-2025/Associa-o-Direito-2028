@@ -22,9 +22,10 @@ export default function ContatoPage() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-white/75">
-              Canal institucional da Associação dos Acadêmicos do Curso de
-              Direito, Turma de Formatura 2028.
-            </p>
+            Canal institucional da Associação dos Acadêmicos do Curso de
+            Direito, Turma de Formatura 2028, com sede administrativa em
+            Araputanga/MT.
+          </p>
           </div>
         </div>
       </section>

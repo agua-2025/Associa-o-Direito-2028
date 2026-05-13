@@ -67,16 +67,16 @@ export function Footer() {
 
             <div className="mt-6 space-y-4 text-sm leading-7 text-white/70">
               <p>
-                Sede administrativa no Município de Mirassol d’Oeste/MT.
+                Associação constituída em 11 de maio de 2026.
+              </p>
+
+              <p>
+                Sede administrativa no Município de Araputanga/MT.
               </p>
 
               <p>
                 Associação civil, estudantil e organizacional, sem fins
-                econômicos.
-              </p>
-
-              <p>
-                Organização, união e memória rumo à formatura de 2028.
+                econômicos e sem fins lucrativos.
               </p>
             </div>
 

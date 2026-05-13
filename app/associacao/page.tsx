@@ -10,14 +10,14 @@ const dados = [
     texto: "Associação dos Acadêmicos do Curso de Direito.",
   },
   {
-    numero: "2028",
-    titulo: "Formatura",
-    texto: "Organização coletiva da turma rumo à formatura.",
+    numero: "2026",
+    titulo: "Constituída",
+    texto: "Constituída em Assembleia Geral realizada em 11 de maio de 2026.",
   },
   {
     numero: "MT",
-    titulo: "Sede",
-    texto: "Sede administrativa em Mirassol d’Oeste/MT.",
+    titulo: "Araputanga",
+    texto: "Sede administrativa da Associação.",
   },
 ];
 
@@ -55,8 +55,8 @@ export default function AssociacaoPage() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-white/75">
-              A AAD Direito 2028 nasce para dar organização, segurança e
-              identidade institucional às ações da turma de Direito rumo à
+              A AAD Direito 2028 foi constituída para dar organização, segurança
+              e identidade institucional às ações da turma de Direito rumo à
               formatura de 2028.
             </p>
           </div>
@@ -102,10 +102,10 @@ export default function AssociacaoPage() {
             <p className="text-xl leading-9 text-[#596579]">
               A Associação dos Acadêmicos do Curso de Direito, Turma de
               Formatura 2028, também denominada AAD Direito 2028, é uma
-              associação civil, estudantil e organizacional, sem fins econômicos,
-              criada para organizar, administrar, arrecadar, gerir e aplicar
-              recursos destinados à realização da formatura dos acadêmicos
-              associados.
+              associação civil, estudantil e organizacional, sem fins econômicos
+              e sem fins lucrativos, criada para organizar, administrar,
+              arrecadar, gerir e aplicar recursos destinados à realização da
+              formatura dos acadêmicos associados.
             </p>
 
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -139,8 +139,8 @@ export default function AssociacaoPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-[#596579]">
-              A Associação será organizada em órgãos próprios, conforme o
-              Estatuto Social e as deliberações da Assembleia Geral.
+              A Associação é organizada em Assembleia Geral, Diretoria e
+              Comissão Fiscal, conforme o Estatuto Social aprovado.
             </p>
           </div>
 

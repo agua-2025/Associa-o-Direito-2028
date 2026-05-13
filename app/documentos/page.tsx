@@ -6,31 +6,31 @@ import { Header } from "@/components/Header";
 const documentos = [
   {
     titulo: "Estatuto Social",
-    status: "Em aprovação",
+    status: "Aprovado",
     texto: "Documento que define a finalidade, estrutura, direitos, deveres e regras gerais da Associação.",
   },
   {
     titulo: "Ata de Constituição",
-    status: "Pendente",
+    status: "Aprovada",
     texto: "Registro formal da Assembleia Geral de Constituição da AAD Direito 2028.",
   },
   {
     titulo: "Ata de Eleição",
-    status: "Pendente",
-    texto: "Documento de eleição e posse da Diretoria e da Comissão Fiscal.",
+    status: "Integrada à Ata de Constituição",
+    texto: "A primeira Diretoria e a Comissão Fiscal foram eleitas na Assembleia Geral de Constituição.",
   },
   {
-    titulo: "Ficha de Filiação",
-    status: "Em elaboração",
-    texto: "Documento individual para ingresso e cadastro dos associados.",
+    titulo: "Versão pública",
+    status: "Em análise",
+    texto: "Os documentos poderão ser disponibilizados em versão pública, com proteção de dados pessoais.",
   },
 ];
 
 const registros = [
-  "Estatuto Social da Associação.",
-  "Atas de assembleias e reuniões.",
-  "Lista de presença dos associados.",
-  "Documentos de filiação e desligamento.",
+  "Estatuto Social aprovado em Assembleia Geral.",
+  "Ata da Assembleia Geral de Constituição.",
+  "Lista de presença dos associados fundadores.",
+  "Documentos de filiação e cadastro interno.",
   "Regulamentos de campanhas e eventos.",
   "Registros administrativos e institucionais.",
 ];
@@ -54,9 +54,8 @@ export default function DocumentosPage() {
             </h1>
 
             <p className="mt-8 max-w-3xl text-lg leading-8 text-white/75">
-              A organização documental é essencial para formalizar decisões,
-              registrar atos institucionais e preservar a história da AAD
-              Direito 2028.
+              A AAD Direito 2028 possui documentos institucionais voltados à
+              formalização, organização e registro dos atos da Associação.
             </p>
           </div>
         </div>
@@ -85,91 +84,99 @@ export default function DocumentosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#a7834d]">
-              Estatuto Social
+              Estatuto e Ata
             </p>
 
             <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-7xl">
-              A base formal da AAD Direito 2028.
+              Documentos aprovados em 11 de maio de 2026.
             </h2>
           </div>
 
           <div className="rounded-[2rem] border border-[#e5dacb] bg-white p-8 shadow-sm md:p-10">
             <p className="text-xl leading-9 text-[#596579]">
-              O Estatuto Social estabelece a denominação, natureza jurídica,
-              sede, finalidade, direitos e deveres dos associados, estrutura da
-              Diretoria, Comissão Fiscal, regras de gestão financeira,
-              prestação de contas e dissolução da Associação.
+              O Estatuto Social e a Ata da Assembleia Geral de Constituição
+              registram a criação da Associação, sua finalidade institucional, a
+              aprovação das regras internas, a eleição da primeira Diretoria e
+              da Comissão Fiscal, bem como as providências para regularização da
+              entidade.
             </p>
 
             <div className="mt-8 rounded-[1.5rem] bg-[#f7f8fa] p-6">
               <p className="text-xs font-bold uppercase tracking-[0.28em] text-[#a7834d]">
-                Situação
+                Publicação no site
               </p>
 
               <p className="font-display mt-3 text-4xl font-semibold text-[#13233a]">
-                Aguardando aprovação e registro
+                Versão pública em análise
               </p>
 
               <p className="mt-3 leading-7 text-[#667085]">
-                Após aprovado e assinado, o Estatuto poderá ser disponibilizado
-                neste espaço em formato PDF.
+                A disponibilização de documentos no portal dependerá de versão
+                pública revisada, com ocultação de dados pessoais sensíveis,
+                assinaturas e informações não necessárias à consulta pública.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-[#edf0f5] py-24">
+      <section className="bg-[#edf0f5] py-16">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="mb-12 max-w-3xl">
-            <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#a7834d]">
-              Arquivo institucional
-            </p>
+          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#a7834d]">
+                Arquivo institucional
+              </p>
 
-            <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-7xl">
-              Documentos que serão organizados.
-            </h2>
-          </div>
+              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+                Documentos mantidos pela Associação.
+              </h2>
+            </div>
 
-          <div className="grid gap-5 md:grid-cols-2">
-            {registros.map((item, index) => (
-              <div
-                key={item}
-                className="flex gap-5 rounded-[1.8rem] border border-white/70 bg-white p-7 shadow-sm"
-              >
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-[#13233a] text-sm font-bold text-white">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+            <div className="rounded-[2rem] border border-white/70 bg-white p-6 shadow-sm md:p-8">
+              <div className="grid gap-3">
+                {registros.map((item, index) => (
+                  <div
+                    key={item}
+                    className="flex items-center gap-4 rounded-2xl bg-[#f7f8fa] px-5 py-4"
+                  >
+                    <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#13233a] text-xs font-bold text-white">
+                      {String(index + 1).padStart(2, "0")}
+                    </div>
 
-                <p className="text-lg leading-8 text-[#596579]">{item}</p>
+                    <p className="text-base leading-7 text-[#596579]">
+                      {item}
+                    </p>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-24">
-        <div className="relative overflow-hidden rounded-[2.4rem] bg-[#c7a56b] p-8 shadow-2xl shadow-slate-900/10 md:p-14">
+      <section className="mx-auto max-w-7xl px-6 py-20">
+        <div className="relative overflow-hidden rounded-[2.4rem] bg-[#c7a56b] p-8 shadow-2xl shadow-slate-900/10 md:p-12">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(255,255,255,0.34),transparent_28%),radial-gradient(circle_at_15%_80%,rgba(19,35,58,0.20),transparent_30%)]" />
 
           <div className="relative grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#13233a]/70">
-                Organização
+                Proteção de dados
               </p>
 
-              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-7xl">
-                Documentos claros fortalecem a confiança.
+              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+                Consulta pública com responsabilidade.
               </h2>
 
               <p className="mt-6 max-w-2xl text-lg leading-8 text-[#13233a]/78">
-                A AAD Direito 2028 manterá seus registros organizados para
-                garantir segurança, memória institucional e cumprimento das
-                deliberações dos associados.
+                Antes da publicação de qualquer documento no portal, a
+                Associação poderá preparar versão pública adequada, preservando
+                dados pessoais, assinaturas e informações de uso interno.
               </p>
             </div>
 
@@ -182,10 +189,10 @@ export default function DocumentosPage() {
               </Link>
 
               <Link
-                href="/contato"
+                href="/transparencia"
                 className="rounded-full border border-[#13233a]/25 bg-white/55 px-8 py-4 text-center text-sm font-semibold text-[#13233a] backdrop-blur transition hover:-translate-y-1 hover:bg-white"
               >
-                Falar com a Associação
+                Ver governança
               </Link>
             </div>
           </div>

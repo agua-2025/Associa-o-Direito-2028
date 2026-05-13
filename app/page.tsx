@@ -15,15 +15,15 @@ const destaques = [
     texto: "Organização coletiva rumo à conclusão da graduação.",
   },
   {
-    numero: "MT",
-    titulo: "Mirassol d’Oeste",
-    texto: "Sede administrativa da Associação.",
-  },
+  numero: "MT",
+  titulo: "Araputanga",
+  texto: "Sede administrativa da Associação.",
+},
   {
-    numero: "CNPJ",
-    titulo: "Em constituição",
-    texto: "Estruturação documental, administrativa e institucional.",
-  },
+  numero: "2026",
+  titulo: "Constituída",
+  texto: "Associação constituída em Assembleia Geral realizada em 11 de maio de 2026.",
+},
 ];
 
 const acoes = [

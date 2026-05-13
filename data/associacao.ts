@@ -1,13 +1,15 @@
 export const associacao = {
-  nome: "Associação Direito 2028",
-  nomeCompleto: "Associação dos Acadêmicos de Direito 2028",
+  nome: "AAD Direito 2028",
+  nomeCompleto:
+    "Associação dos Acadêmicos do Curso de Direito, Turma de Formatura 2028",
   subtitulo: "Turma de Direito rumo à formatura",
   anoFormatura: "2028",
-  status: "Em constituição",
+  status: "Constituída em 11 de maio de 2026",
+  sede: "Araputanga/MT",
   descricao:
-    "A Associação Direito 2028 será uma entidade sem fins econômicos, formada por acadêmicos do curso de Direito, com a finalidade de organizar, planejar e gerir as ações relacionadas à formatura.",
+    "A AAD Direito 2028 é uma associação civil, estudantil e organizacional, sem fins econômicos e sem fins lucrativos, constituída para organizar, administrar, arrecadar, gerir e aplicar recursos destinados à realização da formatura dos acadêmicos associados.",
   textoComplementar:
-    "A proposta é unir governança, responsabilidade e transparência com a energia, a participação e a memória afetiva da turma.",
+    "A proposta é unir organização, responsabilidade, transparência e participação coletiva na caminhada da turma rumo à formatura.",
 };
 
 export const pilares = [
