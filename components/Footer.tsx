@@ -86,6 +86,13 @@ export function Footer() {
             >
               Falar conosco
             </Link>
+            <Link
+            href="https://www.instagram.com/direito_fcarp24"
+            target="_blank"
+            className="mt-4 block text-sm font-semibold text-white/70 transition hover:text-[#c7a56b]"
+          >
+            Instagram: @direito_fcarp24
+          </Link>
           </div>
         </div>
 
