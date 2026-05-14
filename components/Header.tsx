@@ -33,19 +33,25 @@ export function Header() {
             AAD
           </div>
 
-          <div className="leading-none">
-            <p className="text-[11px] font-black uppercase tracking-[0.32em] text-[#c7a56b]">
-              Associação
-            </p>
+<div className="leading-none">
+  <p className="text-[10px] font-black uppercase tracking-[0.36em] text-[#c7a56b]">
+    Associação
+  </p>
 
-            <p className="mt-1 text-2xl font-black uppercase tracking-[-0.04em] text-[#13233a] md:text-3xl">
-              Direito 2028
-            </p>
+  <p className="mt-1 flex items-baseline gap-3">
+    <span className="font-display text-3xl font-bold uppercase tracking-[0.09em] text-[#13233a] md:text-[2.15rem]">
+      Direito
+    </span>
 
-            <p className="mt-1 hidden text-[11px] font-semibold uppercase tracking-[0.18em] text-[#667085] sm:block">
-              Turma de Formatura
-            </p>
-          </div>
+    <span className="text-lg font-black tracking-[0.10em] text-[#13233a] md:text-xl">
+      2028
+    </span>
+  </p>
+
+  <p className="mt-1 hidden text-[10px] font-bold uppercase tracking-[0.28em] text-[#667085] sm:block">
+    Turma de Formatura
+  </p>
+</div>
         </Link>
 
         <nav className="hidden items-center gap-2 rounded-full border border-[#e8dccb] bg-[#f7f8fa] p-1 text-sm font-bold text-[#4b5565] lg:flex">

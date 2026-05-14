@@ -110,7 +110,7 @@ export default function Home() {
               key={item.titulo}
               className="rounded-[1.4rem] border border-[#e5dacb] bg-[#f7f8fa] p-6"
             >
-              <p className="font-display text-5xl font-semibold leading-none text-[#13233a]">
+              <p className="font-display text-[2.7rem] font-semibold leading-none text-[#13233a]">
                 {item.numero}
               </p>
 
