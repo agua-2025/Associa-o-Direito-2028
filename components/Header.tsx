@@ -107,9 +107,9 @@ export function Header() {
         </button>
       </div>
 
-      {menuOpen && (
-        <div className="border-t border-[#e8dccb] bg-white px-6 py-5 lg:hidden">
-          <nav className="mx-auto grid max-w-7xl gap-3 text-base font-bold text-[#13233a]">
+        {menuOpen && (
+        <div className="border-t border-[#e8dccb] bg-white px-6 py-3 lg:hidden">
+        <nav className="mx-auto grid max-w-7xl gap-2 text-base font-bold text-[#13233a]">
             {[...menuItems, ...mobileExtraItems].map((item) => {
               const active = isActive(item.href);
 
@@ -118,7 +118,7 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={closeMenu}
-                  className={`rounded-2xl px-5 py-4 shadow-sm transition ${
+                  className={`rounded-2xl px-5 py-3 shadow-sm transition ${
                     active
                       ? "bg-[#13233a] text-white"
                       : "bg-[#f7f8fa] hover:bg-[#f1ede5]"
@@ -130,12 +130,12 @@ export function Header() {
             })}
 
             <Link
-              href="/associados"
-              onClick={closeMenu}
-              className="rounded-2xl bg-[#c7a56b] px-5 py-4 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
-            >
-              Associar-se
-            </Link>
+            href="/associados"
+            onClick={closeMenu}
+            className="rounded-2xl bg-[#c7a56b] px-5 py-3 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
+          >
+  Associar-se
+</Link>
           </nav>
         </div>
       )}
