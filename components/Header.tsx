@@ -130,11 +130,11 @@ export function Header() {
             })}
 
             <Link
-              href="/campanhas"
+              href="/associados"
               onClick={closeMenu}
               className="rounded-2xl bg-[#c7a56b] px-5 py-4 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
             >
-              Participar
+              Associar-se
             </Link>
           </nav>
         </div>
