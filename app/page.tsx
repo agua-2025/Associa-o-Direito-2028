@@ -33,6 +33,16 @@ const acessos = [
     href: "/associacao",
   },
   {
+    titulo: "Campanhas",
+    texto: "Acompanhe as iniciativas de arrecadação e participação coletiva.",
+    href: "/campanhas",
+  },
+  {
+    titulo: "Eventos",
+    texto: "Veja assembleias, reuniões, campanhas e momentos de integração da turma.",
+    href: "/eventos",
+  },
+  {
     titulo: "Documentos",
     texto: "Consulte o Estatuto Social, a Ata de Constituição e documentos públicos.",
     href: "/documentos",
@@ -178,12 +188,12 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {acessos.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className="group flex min-h-[250px] flex-col rounded-[2rem] border border-white/70 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
+                className="group flex min-h-[210px] flex-col rounded-[2rem] border border-white/70 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
               >
                 <p className="font-display text-3xl font-semibold text-[#13233a]">
                   {item.titulo}
@@ -193,7 +203,7 @@ export default function Home() {
                   {item.texto}
                 </p>
 
-                <p className="mt-auto pt-8 text-sm font-semibold text-[#a7834d] transition group-hover:text-[#13233a]">
+                <p className="mt-auto pt-5 text-sm font-semibold text-[#a7834d] transition group-hover:text-[#13233a]">
                   Acessar página
                 </p>
               </Link>

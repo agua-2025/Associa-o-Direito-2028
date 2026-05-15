@@ -6,7 +6,7 @@ import { Header } from "@/components/Header";
 const eventos = [
   {
     titulo: "Assembleia de Constituição",
-    status: "Em breve",
+    status: "Realizada",
     texto: "Aprovação do Estatuto Social, eleição da Diretoria e composição da Comissão Fiscal.",
     imagem: "/images/evento-assembleia.jpg",
   },
@@ -38,21 +38,21 @@ export default function EventosPage() {
       <Header />
 
       <section className="relative overflow-hidden bg-[#13233a]">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,35,58,0.94),rgba(19,35,58,0.72),rgba(19,35,58,0.30)),url('/images/evento-assembleia.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,35,58,0.94),rgba(19,35,58,0.76),rgba(19,35,58,0.36)),url('/images/evento-assembleia.jpg')] bg-cover bg-center" />
 
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(199,165,107,0.32),transparent_30%),radial-gradient(circle_at_86%_12%,rgba(255,255,255,0.16),transparent_28%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(199,165,107,0.30),transparent_30%),radial-gradient(circle_at_86%_12%,rgba(255,255,255,0.14),transparent_28%)]" />
 
-        <div className="relative mx-auto max-w-7xl px-6 py-24 md:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 md:py-24">
           <div className="max-w-4xl">
             <p className="text-xs font-semibold uppercase tracking-[0.42em] text-[#e6c98d]">
               Eventos
             </p>
 
-            <h1 className="font-display mt-6 text-6xl font-semibold leading-[0.98] tracking-[-0.04em] text-white md:text-8xl">
+            <h1 className="font-display mt-5 text-5xl font-semibold leading-[1.02] tracking-[-0.04em] text-white md:text-7xl">
               Encontros que constroem a nossa história.
             </h1>
 
-            <p className="mt-8 max-w-3xl text-lg leading-8 text-white/75">
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75">
               Assembleias, campanhas, reuniões e momentos de integração fazem
               parte da caminhada da AAD Direito 2028 rumo à formatura.
             </p>
@@ -60,15 +60,14 @@ export default function EventosPage() {
         </div>
       </section>
 
-      <section className="relative z-10 mx-auto -mt-14 max-w-7xl px-6">
-        <div className="grid gap-5 rounded-[2rem] border border-white/60 bg-white/95 p-4 shadow-2xl shadow-slate-900/15 backdrop-blur-xl md:grid-cols-3">
+      <section className="relative z-10 mx-auto -mt-8 max-w-7xl px-6">
+        <div className="grid gap-4 rounded-[2rem] border border-white/60 bg-white/95 p-4 shadow-2xl shadow-slate-900/15 backdrop-blur-xl md:grid-cols-3">
           {eventos.map((evento) => (
-            <Link
+            <article
               key={evento.titulo}
-              href="/eventos"
               className="group overflow-hidden rounded-[1.6rem] border border-[#e5dacb] bg-[#f7f8fa] shadow-sm transition hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/10"
             >
-              <div className="relative h-56 bg-[#13233a]">
+              <div className="relative h-48 bg-[#13233a]">
                 <div
                   className="absolute inset-0 bg-cover bg-center transition duration-500 group-hover:scale-105"
                   style={{
@@ -76,13 +75,13 @@ export default function EventosPage() {
                   }}
                 />
 
-                <div className="absolute inset-0 flex items-end p-6">
+                <div className="absolute inset-0 flex items-end p-5">
                   <div>
                     <p className="text-xs font-bold uppercase tracking-[0.25em] text-[#e6c98d]">
                       {evento.status}
                     </p>
 
-                    <p className="font-display mt-2 text-4xl font-semibold leading-tight text-white">
+                    <p className="font-display mt-2 text-3xl font-semibold leading-tight text-white">
                       {evento.titulo}
                     </p>
                   </div>
@@ -90,27 +89,29 @@ export default function EventosPage() {
               </div>
 
               <div className="p-6">
-                <p className="leading-7 text-[#596579]">{evento.texto}</p>
+                <p className="text-sm leading-7 text-[#596579]">
+                  {evento.texto}
+                </p>
               </div>
-            </Link>
+            </article>
           ))}
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
           <div>
             <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#a7834d]">
               Organização
             </p>
 
-            <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-7xl">
+            <h2 className="font-display mt-4 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
               Eventos simples, úteis e bem registrados.
             </h2>
           </div>
 
-          <div className="rounded-[2rem] border border-[#e5dacb] bg-white p-8 shadow-sm md:p-10">
-            <p className="text-xl leading-9 text-[#596579]">
+          <div className="rounded-[2rem] border border-[#e5dacb] bg-white p-7 shadow-sm md:p-8">
+            <p className="text-lg leading-8 text-[#596579]">
               Os eventos da Associação serão organizados conforme a necessidade
               da turma, com registro das deliberações, participação dos
               associados e alinhamento com os objetivos da formatura.
@@ -121,15 +122,20 @@ export default function EventosPage() {
 
       <section className="bg-[#edf0f5] py-16">
         <div className="mx-auto max-w-7xl px-6">
-          <div className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#a7834d]">
                 Registros
               </p>
 
-              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+              <h2 className="font-display mt-4 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
                 Momentos que poderão ser acompanhados.
               </h2>
+
+              <p className="mt-5 text-lg leading-8 text-[#596579]">
+                A página reunirá registros institucionais das principais
+                atividades, conforme divulgação autorizada pela Associação.
+              </p>
             </div>
 
             <div className="rounded-[2rem] border border-white/70 bg-white p-6 shadow-sm md:p-8">
@@ -154,21 +160,21 @@ export default function EventosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 py-20">
-        <div className="relative overflow-hidden rounded-[2.4rem] bg-[#c7a56b] p-8 shadow-2xl shadow-slate-900/10 md:p-12">
+      <section className="mx-auto max-w-7xl px-6 py-16">
+        <div className="relative overflow-hidden rounded-[2.4rem] bg-[#c7a56b] p-8 shadow-2xl shadow-slate-900/10 md:p-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_85%_12%,rgba(255,255,255,0.34),transparent_28%),radial-gradient(circle_at_15%_80%,rgba(19,35,58,0.20),transparent_30%)]" />
 
-          <div className="relative grid gap-10 lg:grid-cols-[1fr_0.75fr] lg:items-center">
+          <div className="relative grid gap-8 lg:grid-cols-[1fr_0.75fr] lg:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.38em] text-[#13233a]/70">
                 Memória
               </p>
 
-              <h2 className="font-display mt-5 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
+              <h2 className="font-display mt-4 text-5xl font-semibold leading-tight tracking-[-0.03em] text-[#13233a] md:text-6xl">
                 Cada encontro também conta a história da turma.
               </h2>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-[#13233a]/78">
+              <p className="mt-5 max-w-2xl text-lg leading-8 text-[#13233a]/78">
                 Os principais momentos poderão ser registrados na galeria,
                 formando a memória institucional da AAD Direito 2028.
               </p>
