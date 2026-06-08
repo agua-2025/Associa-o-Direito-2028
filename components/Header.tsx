@@ -21,7 +21,7 @@ const mobileExtraItems = [
 ];
 
 const systemUrl =
-  process.env.NEXT_PUBLIC_SYSTEM_URL || "https://painel-aad-2028.vercel.app";
+  process.env.NEXT_PUBLIC_SYSTEM_URL || "https://sistema.aaddireito2028.com.br";
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
