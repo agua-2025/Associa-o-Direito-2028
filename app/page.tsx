@@ -216,7 +216,7 @@ export default function Home() {
         <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-[2rem] bg-[#13233a] text-white shadow-2xl shadow-slate-900/15">
             <div className="relative min-h-[390px]">
-              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(19,35,58,0.12),rgba(19,35,58,0.88)),url('/images/campanha-destaque.jpg')] bg-cover bg-center" />
+              <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(19,35,58,0.12),rgba(19,35,58,0.88)),url('/images/campanha-destaque.png')] bg-cover bg-center" />
 
               <div className="absolute inset-0 flex items-end p-8">
                 <div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
@@ -19,6 +20,9 @@ const mobileExtraItems = [
   { label: "Galeria", href: "/galeria" },
 ];
 
+const systemUrl =
+  process.env.NEXT_PUBLIC_SYSTEM_URL || "https://painel-aad-2028.vercel.app";
+
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -37,38 +41,24 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-[#e8dccb] bg-white/95 shadow-sm shadow-slate-900/5 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3.5">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-5 py-2.5">
         <Link
           href="/"
           onClick={closeMenu}
-          className="group flex items-center gap-4"
+          className="flex min-w-0 items-center"
+          aria-label="AAD Direito 2028"
         >
-          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-[#13233a] text-sm font-black uppercase tracking-[-0.03em] text-[#c7a56b] shadow-lg shadow-slate-900/15 transition group-hover:-translate-y-0.5">
-            AAD
-          </div>
-
-          <div className="leading-none">
-            <p className="text-[10px] font-black uppercase tracking-[0.36em] text-[#c7a56b]">
-              Associação
-            </p>
-
-            <p className="mt-1 flex items-baseline gap-3">
-              <span className="font-display text-3xl font-bold uppercase tracking-[0.09em] text-[#13233a] md:text-[2.15rem]">
-                Direito
-              </span>
-
-              <span className="text-lg font-black tracking-[0.1em] text-[#13233a] md:text-xl">
-                2028
-              </span>
-            </p>
-
-            <p className="mt-1 hidden text-[10px] font-bold uppercase tracking-[0.28em] text-[#667085] sm:block">
-              Turma de Formatura
-            </p>
-          </div>
+          <Image
+            src="/brand/aad-logo-horizontal.png"
+            alt="AAD Direito 2028"
+            width={320}
+            height={90}
+            priority
+            className="h-auto w-[190px] object-contain sm:w-[220px] lg:w-[235px]"
+          />
         </Link>
 
-        <nav className="hidden items-center gap-2 rounded-full border border-[#e8dccb] bg-[#f7f8fa] p-1 text-sm font-bold text-[#4b5565] lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-[#e8dccb] bg-[#f7f8fa] p-1 text-[13px] font-bold text-[#4b5565] lg:flex">
           {menuItems.map((item) => {
             const active = isActive(item.href);
 
@@ -76,7 +66,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-4 py-2.5 transition ${
+                className={`whitespace-nowrap rounded-full px-3.5 py-2 transition ${
                   active
                     ? "bg-[#13233a] text-white shadow-sm"
                     : "hover:bg-white hover:text-[#13233a]"
@@ -88,10 +78,19 @@ export function Header() {
           })}
         </nav>
 
-        <div className="hidden shrink-0 lg:block">
+        <div className="hidden shrink-0 items-center gap-1.5 lg:flex">
           <Link
-            href="/associados"
-            className="rounded-full bg-[#c7a56b] px-6 py-3 text-sm font-black uppercase tracking-[0.08em] text-[#13233a] shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#d8bb82]"
+            href={systemUrl}
+            target="_blank"
+            className="rounded-full border border-[#d7c7b4] bg-white px-4 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-[#13233a] transition hover:-translate-y-0.5 hover:border-[#13233a]"
+          >
+            Acessar sistema
+          </Link>
+
+          <Link
+            href={`${systemUrl}/associar`}
+            target="_blank"
+            className="rounded-full bg-[#c7a56b] px-4 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-[#13233a] shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#d8bb82]"
           >
             Associar-se
           </Link>
@@ -100,16 +99,16 @@ export function Header() {
         <button
           type="button"
           onClick={() => setMenuOpen((current) => !current)}
-          className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#d7c7b4] bg-[#13233a] text-white shadow-sm lg:hidden"
+          className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#d7c7b4] bg-[#13233a] text-white shadow-sm lg:hidden"
           aria-label={menuOpen ? "Fechar menu" : "Abrir menu"}
         >
           <span className="text-2xl leading-none">{menuOpen ? "×" : "☰"}</span>
         </button>
       </div>
 
-        {menuOpen && (
-        <div className="border-t border-[#e8dccb] bg-white px-6 py-3 lg:hidden">
-        <nav className="mx-auto grid max-w-7xl gap-2 text-base font-bold text-[#13233a]">
+      {menuOpen && (
+        <div className="border-t border-[#e8dccb] bg-white px-5 py-3 lg:hidden">
+          <nav className="mx-auto grid max-w-7xl gap-2 text-base font-bold text-[#13233a]">
             {[...menuItems, ...mobileExtraItems].map((item) => {
               const active = isActive(item.href);
 
@@ -130,12 +129,22 @@ export function Header() {
             })}
 
             <Link
-            href="/associados"
-            onClick={closeMenu}
-            className="rounded-2xl bg-[#c7a56b] px-5 py-3 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
-          >
-  Associar-se
-</Link>
+              href={systemUrl}
+              target="_blank"
+              onClick={closeMenu}
+              className="rounded-2xl border border-[#e8dccb] bg-white px-5 py-3 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
+            >
+              Acessar sistema
+            </Link>
+
+            <Link
+              href={`${systemUrl}/associar`}
+              target="_blank"
+              onClick={closeMenu}
+              className="rounded-2xl bg-[#c7a56b] px-5 py-3 text-center font-black uppercase tracking-[0.08em] text-[#13233a] shadow-sm"
+            >
+              Associar-se
+            </Link>
           </nav>
         </div>
       )}

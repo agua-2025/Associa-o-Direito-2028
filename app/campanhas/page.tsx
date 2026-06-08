@@ -31,7 +31,7 @@ export default function CampanhasPage() {
       <Header />
 
       <section className="relative overflow-hidden bg-[#13233a]">
-        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,35,58,0.94),rgba(19,35,58,0.76),rgba(19,35,58,0.36)),url('/images/campanha-destaque.jpg')] bg-cover bg-center" />
+        <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(19,35,58,0.94),rgba(19,35,58,0.76),rgba(19,35,58,0.36)),url('/images/campanha-destaque.png')] bg-cover bg-center" />
 
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_18%_18%,rgba(199,165,107,0.30),transparent_30%),radial-gradient(circle_at_86%_12%,rgba(255,255,255,0.14),transparent_28%)]" />
 

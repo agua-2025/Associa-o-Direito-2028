@@ -14,9 +14,9 @@ const cormorant = Cormorant_Garamond({
 });
 
 export const metadata: Metadata = {
-  title: "Associação Direito 2028",
+  title: "AAD Direito 2028",
   description:
-    "Portal institucional da Associação dos Acadêmicos de Direito 2028.",
+    "Portal institucional da Associação dos Acadêmicos do Curso de Direito - Turma de Formatura 2028.",
 };
 
 export default function RootLayout({
