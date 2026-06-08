@@ -7,17 +7,17 @@ import { useState } from "react";
 
 const menuItems = [
   { label: "Início", href: "/" },
-  { label: "Quem somos", href: "/associacao" },
+  { label: "Associação", href: "/associacao" },
   { label: "Campanhas", href: "/campanhas" },
+  { label: "Galeria", href: "/galeria" },
   { label: "Documentos", href: "/documentos" },
   { label: "Governança", href: "/transparencia" },
-  { label: "Contato", href: "/contato" },
 ];
 
 const mobileExtraItems = [
-  { label: "Associados", href: "/associados" },
   { label: "Eventos", href: "/eventos" },
-  { label: "Galeria", href: "/galeria" },
+  { label: "Associados", href: "/associados" },
+  { label: "Contato", href: "/contato" },
 ];
 
 const systemUrl =
@@ -58,7 +58,7 @@ export function Header() {
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 rounded-full border border-[#e8dccb] bg-[#f7f8fa] p-1 text-[13px] font-bold text-[#4b5565] lg:flex">
+        <nav className="hidden items-center gap-1 rounded-full border border-[#e8dccb] bg-[#f7f8fa] p-1 text-xs font-bold text-[#4b5565] lg:flex">
           {menuItems.map((item) => {
             const active = isActive(item.href);
 
@@ -66,7 +66,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className={`whitespace-nowrap rounded-full px-3.5 py-2 transition ${
+                className={`whitespace-nowrap rounded-full px-3 py-2 transition ${
                   active
                     ? "bg-[#13233a] text-white shadow-sm"
                     : "hover:bg-white hover:text-[#13233a]"
@@ -82,7 +82,7 @@ export function Header() {
           <Link
             href={systemUrl}
             target="_blank"
-            className="rounded-full border border-[#d7c7b4] bg-white px-4 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-[#13233a] transition hover:-translate-y-0.5 hover:border-[#13233a]"
+            className="rounded-full border border-[#d7c7b4] bg-white px-4 py-2 text-xs font-black uppercase tracking-[0.06em] text-[#13233a] transition hover:-translate-y-0.5 hover:border-[#13233a]"
           >
             Acessar sistema
           </Link>
@@ -90,7 +90,7 @@ export function Header() {
           <Link
             href={`${systemUrl}/associar`}
             target="_blank"
-            className="rounded-full bg-[#c7a56b] px-4 py-2.5 text-xs font-black uppercase tracking-[0.08em] text-[#13233a] shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#d8bb82]"
+            className="rounded-full bg-[#c7a56b] px-4 py-2 text-xs font-black uppercase tracking-[0.06em] text-[#13233a] shadow-lg shadow-slate-900/10 transition hover:-translate-y-0.5 hover:bg-[#d8bb82]"
           >
             Associar-se
           </Link>

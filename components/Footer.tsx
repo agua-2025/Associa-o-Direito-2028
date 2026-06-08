@@ -5,6 +5,7 @@ const links = [
   { label: "Quem somos", href: "/associacao" },
   { label: "Campanhas", href: "/campanhas" },
   { label: "Eventos", href: "/eventos" },
+  { label: "Galeria", href: "/galeria" },
   { label: "Documentos", href: "/documentos" },
   { label: "Governança", href: "/transparencia" },
   { label: "Contato", href: "/contato" },
